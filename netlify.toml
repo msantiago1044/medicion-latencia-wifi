@@ -1,3 +1,28 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+  [functions."*"]
+
 [build]
-  command = "npm run build"
-  publish = "dist"
+publish = "/opt/build/repo/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+base = "/opt/build/repo"
+command = "npm ci --include=dev && npm run build"
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
